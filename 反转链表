@@ -1,0 +1,25 @@
+题目描述
+输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
+
+解题思路：遍历链表，把后一个节点插入到新链表中头部
+public class Solution {
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        ArrayList<Integer> ans = new ArrayList<Integer>();
+        if(listNode==null)
+            return ans;
+        ListNode root = new ListNode(-1);
+        ListNode point = listNode;
+        while(point!=null){
+            ListNode temp = root.next;
+            root.next = point;
+            point = point.next;
+            root.next.next = temp;
+        }
+        point = root.next;
+        while(point!=null){
+            ans.add(point.val);
+            point = point.next;
+        }
+        return ans;
+    }
+}
