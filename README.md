@@ -9,3 +9,5 @@
 
 
 [**斐波那契数列**](https://github.com/ferris470/-Offer/blob/master/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)
+
+[**序列化二叉树**](https://github.com/ferris470/-Offer/blob/master/%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91)
