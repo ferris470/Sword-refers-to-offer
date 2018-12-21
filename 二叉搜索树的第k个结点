@@ -1,0 +1,25 @@
+给定一棵二叉搜索树，请找出其中的第k小的结点。例如， （5，3，7，2，4，6，8）    中，按结点数值大小顺序第三小结点的值为4。
+
+解题思路：用list来按照节点大小顺序存储节点，返回k对应节点，注意讨论k值超过节点数目和k为0的特殊情况
+import java.util.*;
+public class Solution {
+    List<TreeNode> ans = new ArrayList<TreeNode>();
+    int index = 0;
+    TreeNode KthNode(TreeNode pRoot, int k)
+    {
+        if(pRoot==null||k==0)
+            return null;
+        middleVisit(pRoot,k);
+        if(k>ans.size())
+            return null;
+        return ans.get(k-1);
+    }
+    public void middleVisit(TreeNode root,int k){
+        if(root==null||index==k)
+            return;
+        middleVisit(root.left,k);
+        ans.add(root);
+        index++;
+        middleVisit(root.right,k);
+    }
+}
