@@ -13,3 +13,5 @@
 [**序列化二叉树**](https://github.com/ferris470/-Offer/blob/master/%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91)
 
 [**二叉搜索树的第k个结点**](https://github.com/ferris470/-Offer/blob/master/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9)
+
+[**数值的整数次方**](https://github.com/ferris470/-Offer/blob/master/%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9)
