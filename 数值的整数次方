@@ -1,0 +1,17 @@
+给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。
+
+解题思路：需要考虑指数是负数的情况
+public double Power(double base, int exponent) {
+        double ans = 1;
+        int cnt = 0;
+        boolean isNag = false;
+        if(exponent<0){
+            exponent = 0-exponent;
+            isNag = true;
+        }
+        while(cnt!=exponent){
+            ans*=base;
+            cnt++;
+        }
+        return isNag==true?1/ans:ans;
+  }
