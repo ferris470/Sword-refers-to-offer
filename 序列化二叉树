@@ -1,0 +1,29 @@
+请实现两个函数，分别用来序列化和反序列化二叉树
+
+解题思路：每个节点之间空格隔开，空节点表示为#
+public class Solution {
+    String deserialString;
+    String Serialize(TreeNode root) {
+        if(root==null)
+            return "#";
+        return root.val+" "+Serialize(root.left)+" "+Serialize(root.right);
+  }
+    TreeNode Deserialize(String str) {
+        deserialString = str;
+        return help();
+  }
+    public TreeNode help(){
+        if(deserialString.length()==0)
+            return null;
+        int index = deserialString.indexOf(" ");
+        String node = index==-1?deserialString:deserialString.substring(0,index);
+        deserialString = index==-1?"":deserialString.substring(index+1);
+        if(node.equals("#"))
+            return null;
+        int val = Integer.valueOf(node);
+        TreeNode t = new TreeNode(val);
+        t.left = help();
+        t.right = help();
+        return t;
+    }
+}
