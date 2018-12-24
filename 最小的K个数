@@ -1,0 +1,44 @@
+输入n个整数，找出其中最小的K个数。例如输入4,5,1,6,2,7,3,8这8个数字，则最小的4个数字是1,2,3,4,。
+
+解题思路：快速排序
+public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        ArrayList<Integer> ans = new ArrayList<Integer>();
+        if(k<=0||k>input.length)
+            return ans;
+        findKthElement(input,k);
+        for(int i = 0;i<k;i++)
+            ans.add(input[i]);
+        return ans;
+    }
+    public void findKthElement(int[] input,int k){
+        int l = 0,h = input.length-1;
+        while(l<h){
+            int j = partition(input,l,h);
+            if(j==k)
+                break;
+            else if(j>k)
+                h = j-1;
+            else
+                l = j+1;
+        }
+    }
+    public int partition(int[] input,int l,int h){
+        int p = input[l];
+        int i = l+1,j = h;
+        while(true){
+            while(input[i]<p)
+                i++;
+            while(input[j]>p)
+                j--;
+            if(i>=j)
+                break;
+            swap(input,i,j);
+        }
+        swap(input,j,l);
+        return j;
+    }
+    public void swap(int[] input,int i,int j){
+        int temp = input[i];
+        input[i] = input[j];
+        input[j] = temp;
+    }
