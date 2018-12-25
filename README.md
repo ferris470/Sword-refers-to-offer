@@ -21,3 +21,5 @@
 [**顺时针打印矩阵**](https://github.com/ferris470/-Offer/blob/master/%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5)
 
 [**连续子数组的最大和**](https://github.com/ferris470/Sword-refers-to-offer/blob/master/%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C)
+
+[**第一个只出现一次的字符**](https://github.com/ferris470/Sword-refers-to-offer/blob/master/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6)
